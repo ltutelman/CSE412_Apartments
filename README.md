@@ -3,15 +3,27 @@ Command Line Tempe Apartment Finding Application
 
 # Options
 
-So, I wasnt sure how we wanted the user to interact with the command line so I did a couple of things. Theres a menu option that sort of works and also a custom query that works in a super basic but easy to break way.  Idk how much we care to change stuff
+So, I wasnt sure how we wanted the user to interact with the command line so there are two files. (Apartments.py) The first uses raw SQL queries since we have a lot of them written already.  (Apartments_df.py) The second one transforms each table into pandas dataframes first and then uses those to make all the queries.  Personally, I think the second one works way better. 
 
-## Here are the ways I queried things
+## Apartments.py
 
 First, you can see how to do a really simple query in showAll on line 38.  
 
 A more complicated query is in customQuery on line 50.
 
 Basically, the user can either choose a structured filter option or they can do a quick query by apartment, bedroom count, and cost (option 4)
+
+See Sample input in Apartments.png
+
+
+## Apartments_df.py
+
+Much better approach.  Uses dataframes in pandas.  
+
+See Sample input in Apartments_df.png
+
+
+
 
 # Notes
 
