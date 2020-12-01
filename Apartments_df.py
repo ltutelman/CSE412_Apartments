@@ -55,7 +55,7 @@ def show_all():
 
 
 def structured_query():
-    apt_list = input("Please enter the apartments you would like to query, delimited with spaces\n").capitalize().split(', ')
+    apt_list = input("Please enter the apartments you would like to query, delimited with spaces\n").title().split(', ')
     # halfQuery = apartment.apartment_name.isin(aList)
     # print(apartment[halfQuery])
     filter_by_apartment = apartment[apartment.apartment_name.isin(apt_list)]
@@ -73,7 +73,7 @@ def structured_query():
 
     maxPrice = int(input("\nPlease enter the maximum price you would like to pay\n"))
 
-    merge_bed_count_and_price = filter_by_count_apartment.merge(room_cost, left_on="plan_code", right_on="floor_plan", how="inner")
+    merge_bed_count_and_price = filter_by_count_apartment.merge(room_cost)
     filter_by_price = merge_bed_count_and_price[merge_bed_count_and_price.total_mandatory_cost.ge(minPrice)]
     filter_by_price = filter_by_price[filter_by_price.total_mandatory_cost.le(maxPrice)]
 
