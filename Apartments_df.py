@@ -52,6 +52,11 @@ staff = create_pandas_table('SELECT * FROM public."Staff"')
 
 def show_all():
     print(apartment)
+    apartment_choice = input("Would you like to know more about any of these apartments? Please list the name of one below or type 'exit'")
+    if apartment_choice != "exit":
+        #rating: apartment_name, social_media: apartment_name, staff: apartment_name
+        getApartment = apartment[apartment.apartment_name == apartment_choice].merge(social_media).merge(rating).merge(staff)
+        print(getApartment)
 
 
 def structured_query():
