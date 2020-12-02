@@ -179,50 +179,62 @@ def custom_query():
 
         elif user_input == "5":
             apt_type = input(type_prompt)
-            if apt_type.lower() == "luxury" or "budget":
+            if apt_type == "luxury" or "budget":
                 filters["type"] = apt_type
             else:
                 print(error_prompt)
 
         elif user_input == "6":
             apt_gym = input(gym_prompt)
-            if apt_gym.lower() == "yes" or "no":
-                filters["gym"] = apt_gym
+            if apt_gym == "yes":
+                filters["gym"] = "true"
+            if apt_gym == "no":
+                filters["gym"] = "false"
             else:
                 print(error_prompt)
 
         elif user_input == "7":
             apt_pool = input(pool_prompt)
-            if apt_pool.lower() == "yes" or "no":
-                filters["pool"] = apt_pool
+            if apt_pool == "yes":
+                filters["pool"] = "true"
+            if apt_pool == "no":
+                filters["pool"] = "false"
             else:
                 print(error_prompt)
 
         elif user_input == "8":
             apt_study = input(study_prompt)
-            if apt_study.lower() == "yes" or "no":
-                filters["study"] = apt_study
+            if apt_study == "yes":
+                filters["study"] = "true"
+            if apt_study == "no":
+                filters["study"] = "false"
             else:
                 print(error_prompt)
 
         elif user_input == "9":
             apt_parking = input(parking_prompt)
-            if apt_parking.lower() == "yes" or "no":
-                filters["parking"] = apt_parking
+            if apt_parking == "yes":
+                filters["parking"] = "true"
+            if apt_parking == "no":
+                filters["parking"] = "false"
             else:
                 print(error_prompt)
 
         elif user_input == "10":
             apt_dog = input(dog_prompt)
-            if apt_dog.lower() == "yes" or "no":
-                filters["dog"] = apt_dog
+            if apt_dog == "yes":
+                filters["dog"] = "true"
+            if apt_dog == "no":
+                filters["dog"] = "false"
             else:
                 print(error_prompt)
 
         elif user_input == "11":
             apt_sauna = input(sauna_prompt)
-            if apt_sauna.lower() == "yes" or "no":
-                filters["sauna"] = apt_sauna
+            if apt_sauna == "yes":
+                filters["sauna"] = "true"
+            if apt_sauna == "no":
+                filters["sauna"] = "false"
             else:
                 print(error_prompt)
 
