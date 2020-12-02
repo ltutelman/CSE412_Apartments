@@ -1,3 +1,5 @@
+Instructions:
+
 1. Download the project.
 2. Install Python3 by running:
 		$ brew install python3
