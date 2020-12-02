@@ -155,85 +155,85 @@ def custom_query():
     while user_input != "exit":
         user_input = input(user_prompt)
 
-        if user_input.lower() == "1" or "apartment complex":
+        if user_input == "1":
             apt_list = input(apt_prompt).title().split(', ')
             filters["apartments"] = apt_list
 
-        elif user_input.lower() == "2" or "number of bedrooms":
+        elif user_input == "2":
             num_bedrooms = input(bedroom_prompt).split(', ')
             filters["bedrooms"] = num_bedrooms
 
-        elif user_input.lower() == "3" or "minimum payment":
+        elif user_input == "3":
             min_payment = int(input(min_prompt))
             if type(min_payment) == int:
                 filters["min"] = min_payment
             else:
                 print(error_prompt)
 
-        elif user_input.lower() == "4" or "maximum payment":
+        elif user_input == "4":
             max_payment = int(input(max_prompt))
             if type(max_payment) == int:
                 filters["max"] = max_payment
             else:
                 print(error_prompt)
 
-        elif user_input.lower() == "5" or "luxury or budget":
+        elif user_input == "5":
             apt_type = input(type_prompt)
             if apt_type.lower() == "luxury" or "budget":
                 filters["type"] = apt_type
             else:
                 print(error_prompt)
 
-        elif user_input.lower() == "6" or "gym":
+        elif user_input == "6":
             apt_gym = input(gym_prompt)
             if apt_gym.lower() == "yes" or "no":
                 filters["gym"] = apt_gym
             else:
                 print(error_prompt)
 
-        elif user_input.lower() == "7" or "pool":
+        elif user_input == "7":
             apt_pool = input(pool_prompt)
             if apt_pool.lower() == "yes" or "no":
                 filters["pool"] = apt_pool
             else:
                 print(error_prompt)
 
-        elif user_input.lower() == "8" or "study room":
+        elif user_input == "8":
             apt_study = input(study_prompt)
             if apt_study.lower() == "yes" or "no":
                 filters["study"] = apt_study
             else:
                 print(error_prompt)
 
-        elif user_input.lower() == "9" or "parking":
+        elif user_input == "9":
             apt_parking = input(parking_prompt)
             if apt_parking.lower() == "yes" or "no":
                 filters["parking"] = apt_parking
             else:
                 print(error_prompt)
 
-        elif user_input.lower() == "10" or "dog park":
+        elif user_input == "10":
             apt_dog = input(dog_prompt)
             if apt_dog.lower() == "yes" or "no":
                 filters["dog"] = apt_dog
             else:
                 print(error_prompt)
 
-        elif user_input.lower() == "11" or "sauna":
+        elif user_input == "11":
             apt_sauna = input(sauna_prompt)
             if apt_sauna.lower() == "yes" or "no":
                 filters["sauna"] = apt_sauna
             else:
                 print(error_prompt)
 
-        elif user_input.lower() == "continue":
+        elif user_input == "continue":
             merged_db = apartment.merge(amenities).merge(apartment_type).merge(rating).merge(room).merge(room_cost).merge(room_plan).merge(social_media).merge(staff)
 
-            if filters["apartment"]:
-                merged_db = merged_db[merged_db.apartment_name.isin(filters.get("apartment"))]
+            if filters["apartments"]:
+                merged_db = merged_db[merged_db.apartment_name.isin(filters.get("apartments"))]
 
             if filters["bedrooms"]:
-                merged_db = merged_db[merged_db.bedrooms.isin(filters.get("apartment"))]
+                merged_db = merged_db[merged_db.bedrooms.isin(filters.get("apartments"))]
 
             if filters["min"]:
                 merged_db = merged_db[merged_db.total_mandatory_cost.ge(int(filters.get("min")))]
@@ -242,31 +242,41 @@ def custom_query():
                 merged_db = merged_db[merged_db.total_mandatory_cost.le(int(filters.get("max")))]
 
             if filters["type"]:
-                merged_db = merged_db[merged_db.budget_luxury.isin(filters.get("type"))]
+                # merged_db = merged_db[merged_db.budget_luxury.isin(filters.get("type"))]
+                merged_db = merged_db[merged_db["budget_luxury"] == filters.get("type")]
 
             if filters["gym"]:
-                merged_db = merged_db[merged_db.gym.isin(filters.get("gym"))]
+                # merged_db = merged_db[merged_db.gym.isin(filters.get("gym"))]
+                merged_db = merged_db[merged_db["gym"] == filters.get("gym")]
 
             if filters["pool"]:
-                merged_db = merged_db[merged_db.pool.isin(filters.get("pool"))]
+                # merged_db = merged_db[merged_db.pool.isin(filters.get("pool"))]
+                merged_db = merged_db[merged_db["pool"] == filters.get("pool")]
 
             if filters["study"]:
-                merged_db = merged_db[merged_db.study_rooms.isin(filters.get("study"))]
+                # merged_db = merged_db[merged_db.study_rooms.isin(filters.get("study"))]
+                merged_db = merged_db[merged_db["study"] == filters.get("study")]
 
             if filters["parking"]:
-                merged_db = merged_db[merged_db.parking.isin(filters.get("parking"))]
+                # merged_db = merged_db[merged_db.parking.isin(filters.get("parking"))]
+                merged_db = merged_db[merged_db["parking"] == filters.get("parking")]
 
             if filters["dog"]:
-                merged_db = merged_db[merged_db.dog_park.isin(filters.get("dog"))]
+                # merged_db = merged_db[merged_db.dog_park.isin(filters.get("dog"))]
+                merged_db = merged_db[merged_db["dog"] == filters.get("dog")]
 
             if filters["sauna"]:
-                merged_db = merged_db[merged_db.sauna.isin(filters.get("sauna"))]
+                # merged_db = merged_db[merged_db.sauna.isin(filters.get("sauna"))]
+                merged_db = merged_db[merged_db["sauna"] == filters.get("sauna")]
 
             if merged_db.empty:
-                print("\nThere are no apartments available with these filters.")
+                print("\nThere are no apartments available with these filters.\n")
 
             else:
                 print(merged_db)
+
+        elif user_input == "exit":
+            break
 
         else:
             user_input = input(error_prompt)
