@@ -8,6 +8,7 @@ Command Line Tempe Apartment Finding Application
 3. Install required packages (psycopg2 and pandas) by running:
 	
 	$ pip3 install psycopg2
+	
 	$ pip3 install pandas
 4. Go to where the project is saved and run the project:
 	
