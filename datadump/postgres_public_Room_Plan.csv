@@ -1,0 +1,88 @@
+A1,1,1,true,true,true,true,650,true,District,true
+B1,2,2,true,true,true,true,900,true,District,true
+B2,1,2,true,true,true,true,700,true,District,true
+C2,4,3,true,true,true,true,1200,true,District,true
+C1,3,3,true,true,true,true,1000,true,District,true
+D2,2,4,true,true,true,true,1200,true,District,true
+S1,1,0,true,true,true,true,550,true,District,true
+D1,4,4,true,true,true,true,1400,true,District,true
+A1,1,1,false,true,true,true,650,true,Union,true
+B1,2,2,false,true,true,true,900,true,Union,true
+B2,1,2,false,true,true,true,700,true,Union,true
+C2,4,3,false,true,true,true,1200,true,Union,true
+C1,3,3,false,true,true,true,1000,true,Union,true
+D2,2,4,false,true,true,true,1200,true,Union,true
+S1,1,0,false,true,true,true,550,true,Union,true
+D1,4,4,false,true,true,true,1400,true,Union,true
+A1,1,1,true,true,true,false,650,false,Oliv,true
+B1,2,2,true,true,true,false,900,false,Oliv,true
+B2,1,2,true,true,true,false,700,false,Oliv,true
+C2,4,3,true,true,true,false,1200,false,Oliv,true
+C1,3,3,true,true,true,false,1000,false,Oliv,true
+D2,2,4,true,true,true,false,1200,false,Oliv,true
+S1,1,0,true,true,true,false,550,false,Oliv,true
+D1,4,4,true,true,true,false,1400,false,Oliv,true
+A1,1,1,true,true,true,true,650,true,Boulevard 1900,true
+B1,2,2,true,true,true,true,900,true,Boulevard 1900,true
+B2,1,2,true,true,true,true,700,true,Boulevard 1900,true
+C2,4,3,true,true,true,true,1200,true,Boulevard 1900,true
+C1,3,3,true,true,true,true,1000,true,Boulevard 1900,true
+D2,2,4,true,true,true,true,1200,true,Boulevard 1900,true
+S1,1,0,true,true,true,true,550,true,Boulevard 1900,true
+D1,4,4,true,true,true,true,1400,true,Boulevard 1900,true
+A1,1,1,false,true,false,false,650,true,Nexa,false
+B1,2,2,false,true,false,false,900,true,Nexa,false
+B2,1,2,false,true,false,false,700,true,Nexa,false
+C2,4,3,false,true,false,false,1200,true,Nexa,false
+C1,3,3,false,true,false,false,1000,true,Nexa,false
+D2,2,4,false,true,false,false,1200,true,Nexa,false
+S1,1,0,false,true,false,false,550,true,Nexa,false
+D1,4,4,false,true,false,false,1400,true,Nexa,false
+A1,1,1,true,true,true,true,650,true,Park Place,true
+B1,2,2,true,true,true,true,900,true,Park Place,true
+B2,1,2,true,true,true,true,700,true,Park Place,true
+C2,4,3,true,true,true,true,1200,true,Park Place,true
+C1,3,3,true,true,true,true,1000,true,Park Place,true
+D2,2,4,true,true,true,true,1200,true,Park Place,true
+S1,1,0,true,true,true,true,550,true,Park Place,true
+D1,4,4,true,true,true,true,1400,true,Park Place,true
+A1,1,1,true,true,true,true,650,true,Rise,true
+B1,2,2,true,true,true,true,900,true,Rise,true
+B2,1,2,true,true,true,true,700,true,Rise,true
+C2,4,3,true,true,true,true,1200,true,Rise,true
+C1,3,3,true,true,true,true,1000,true,Rise,true
+D2,2,4,true,true,true,true,1200,true,Rise,true
+S1,1,0,true,true,true,true,550,true,Rise,true
+D1,4,4,true,true,true,true,1400,true,Rise,true
+A1,1,1,true,true,true,true,650,true,Vertex,true
+B1,2,2,true,true,true,true,900,true,Vertex,true
+B2,1,2,true,true,true,true,700,true,Vertex,true
+C2,4,3,true,true,true,true,1200,true,Vertex,true
+C1,3,3,true,true,true,true,1000,true,Vertex,true
+D2,2,4,true,true,true,true,1200,true,Vertex,true
+S1,1,0,true,true,true,true,550,true,Vertex,true
+D1,4,4,true,true,true,true,1400,true,Vertex,true
+A1,1,1,true,true,true,true,650,true,Sol,false
+B1,2,2,true,true,true,true,900,true,Sol,false
+B2,1,2,true,true,true,true,700,true,Sol,false
+C2,4,3,true,true,true,true,1200,true,Sol,false
+C1,3,3,true,true,true,true,1000,true,Sol,false
+D2,2,4,true,true,true,true,1200,true,Sol,false
+S1,1,0,true,true,true,true,550,true,Sol,false
+D1,4,4,true,true,true,true,1400,true,Sol,false
+A1,1,1,true,true,true,true,650,true,Nine20,true
+B1,2,2,true,true,true,true,900,true,Nine20,true
+B2,1,2,true,true,true,true,700,true,Nine20,true
+C2,4,3,true,true,true,true,1200,true,Nine20,true
+C1,3,3,true,true,true,true,1000,true,Nine20,true
+D2,2,4,true,true,true,true,1200,true,Nine20,true
+S1,1,0,true,true,true,true,550,true,Nine20,true
+D1,4,4,true,true,true,true,1400,true,Nine20,true
+A1,1,1,true,true,true,true,650,false,Apollo,true
+B1,2,2,true,true,true,true,900,false,Apollo,true
+B2,1,2,true,true,true,true,700,false,Apollo,true
+C2,4,3,true,true,true,true,1200,false,Apollo,true
+C1,3,3,true,true,true,true,1000,false,Apollo,true
+D2,2,4,true,true,true,true,1200,false,Apollo,true
+S1,1,0,true,true,true,true,550,false,Apollo,true
+D1,4,4,true,true,true,true,1400,false,Apollo,true
